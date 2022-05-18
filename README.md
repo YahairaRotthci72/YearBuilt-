@@ -1,0 +1,2 @@
+# YearBuilt-
+Local $oXML = ObjCreate("Microsoft.XMLDOM") $oXML.load($ReportFile)  ;just some of the code here: ;add node year built and update it     $oOther = $oXML.SelectSingleNode('//template/genInfo/GA/SM[1]')     $Node=$oXML.CreateElement('SMT')     $oOther.AppendChild($Node)     $oOther = $oXML.SelectSingleNode('//template/genInfo/GA/SM[1]/SMT')     $oOther.text=$YearBuilt       $oxml.save($ReportFile)
